@@ -1,0 +1,173 @@
+body {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    margin-top: 3rem;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    margin: auto;
+    width: 50%;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    background-color: #262626;
+    padding: 1rem;
+    margin-bottom: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d0604c;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promotion {
+    display: flex;
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.promotion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.promo-text {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 6s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.promo-text h1 {
+    text-align: center;
+    font-size: 3em;
+    font-family: "Herr Von Muellerhoff", cursive;
+    font-size: 90px;
+    font-weight: 100;
+    line-height: 1.2em;
+}
+
+.promo-text p {
+    font-size: 1.5em;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.card {
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 5px 5px 0 0;
+}
+
+span {
+    font-family: "Herr Von Muellerhoff", cursive;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.2em;
+    color: #d0604c;
+}
+
+h2 {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1px;
+}
+
+.heading {
+    margin: 10px 0px 15px 0px;
+}
+
+footer {
+    display: flex;
+    background-color: #262626;
+    padding: 10px 30px;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-logo img {
+    max-width: 15%;
+}
+
+.footer-text {
+    flex: 1;
+    text-align: center;
+    color: white;
+}
